@@ -1,3 +1,4 @@
+# standard stuff
 alias ls="ls -lh --color=auto" # list in dir
 alias lss='ls --human-readable --size -1 -S --classify' # list and sort size
 alias lst='ls -t -1' # list by mod time
@@ -15,3 +16,19 @@ alias rm='rm -i'
 # pacman
 alias update="sudo pacman -Syyu" # update system
 alias pac="sudo pacman -S" # install
+# power
+alias shutdown="sudo shutdown -P now"
+alias reboot="sudo shutdown -r now"
+# misc
+alias ping='ping -c 5' # ping 5
+# get out of current directory
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+# date time
+alias now="date +"%T""
+alias nowtime=now
+alias nowdate="date +\"%d-%m-%Y\""
