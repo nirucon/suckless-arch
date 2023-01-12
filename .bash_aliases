@@ -8,3 +8,10 @@ alias fm="ranger" # ranger filemanager
 alias r="ranger" # ranger filemanager
 alias cal="cal -w -m" # calendar with weeknumbers
 alias calc="bc" # calculator
+# check before overwrite
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+# pacman
+alias update="sudo pacman -Syyu" # update system
+alias pac="sudo pacman -S" # install
