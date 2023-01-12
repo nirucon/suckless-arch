@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo mkdir /media/500GB/ &
+sudo mkdir /media/500GB-USB/ &
+sudo mkdir /media/1TB-ONE/ &
+sudo mkdir /media/1TB-TWO/ &
+sudo mkdir /media/128GB/ &
+
+echo "done mkdirs in /media"

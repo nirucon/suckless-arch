@@ -1,0 +1,13 @@
+# fstab addons for ws @ alnas
+
+# alnas / avoid disks
+#  sda1 500gb
+UUID=dde9c8f2-f54d-4267-ae28-9e6153b8ef71 /media/500GB btrfs defaults,noatime 0 2
+#  sdc1 usb
+UUID=08c2ecbb-28a6-4cb3-b2b8-8e7ad554bb4f /media/500GB-USB btrfs defaults,noatime 0 2
+#  nvme0n1p1 1tb 1
+UUID=97629dc1-5c1c-4857-a734-0c79548c30c5 /media/1TB-ONE btrfs defaults,noatime 0 2
+#  nvme1n1p1 1tb 2
+UUID=31614e00-2e20-46b1-ace8-2e3deb81b1ba /media/1TB-TWO btrfs defaults,noatime 0 2
+#  sdb1 128 gb (dual boot os)
+#UUID=3775db72-cc32-485a-a7c7-6bdcc069490a /media/128GB btrfs defaults,noatime 0 2

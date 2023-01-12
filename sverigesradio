@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+#
+# Script name: sverigesradio
+# Description: Play Swedish national radio (SR) with mpv
+# Contributors: Nicklas Rudolfsson
+# Note: P4 is P4 Väst in this case
+# dep pkg: mpv
+
+# bugs discover
+set -euo pipefail
+
+# options
+declare -a options=(
+"P1"
+"P2"
+"P3"
+"P4-V"
+"Ekot-direkt"
+"Kill-mpv"
+"Quit"
+)
+
+_out(){
+    ${_out} "dmsradio" "$@"
+}
+
+# array into dmenu
+# "printf '%s\n'" to format the array one item to a line
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p 'Radio control:' "${@}")
+
+# what to do with the options
+case $choice in
+    'P1')
+            mpv https://sverigesradio.se/topsy/direkt/132-hi-mp3.m3u
+        ;;
+    'P2')
+            mpv https://sverigesradio.se/topsy/direkt/2562-hi-mp3.m3u
+        ;;
+    'P3')
+            mpv https://sverigesradio.se/topsy/direkt/164-hi-mp3.m3u
+        ;;
+    'P4-V')
+            mpv https://sverigesradio.se/topsy/direkt/219-hi-mp3.m3u
+        ;;
+    'Ekot-direkt')
+            mpv https://sverigesradio.se/topsy/direkt/4540-hi-mp3.m3u
+        ;;
+    'Kill-mpv')
+            pkill mpv
+            # killall mpv
+        ;;
+    'Quit')
+        output "Program terminated." && exit 0
+    ;;
+    *)
+        exit 0
+    ;;
+esac
+

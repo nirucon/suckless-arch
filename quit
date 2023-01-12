@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+#
+# Script name: quit
+# Description: dmenu exit, quit, logout etc
+# Contributors: Nicklas Rudolfsson
+# dep pgk: slock
+
+# bugs discover
+set -euo pipefail
+
+# options
+declare -a options=(
+"Lock"
+"Suspend"
+"Logout"
+"Reboot"
+"Shutdown"
+"Kill xinit"
+"Quit"
+)
+
+_out(){
+    ${_out} "exit" "$@"
+}
+
+# array into dmenu
+# "printf '%s\n'" to format the array one item to a line
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p 'Quit options:' "${@}")
+
+# what to do with the options
+case $choice in
+    'Lock')
+            slock
+        ;;
+    'Suspend')
+            systemctl suspend
+        ;;
+    'Logout')
+            systemctl logout
+        ;;
+    'Reboot')
+            reboot now	
+        ;;
+    'Shutdown')
+            shutdown now
+    'Kill xinit')
+            pkill xinit
+        ;;
+    'Quit')
+        output "Program terminated." && exit 0
+    ;;
+    *)
+        exit 0
+    ;;
+esac
+
