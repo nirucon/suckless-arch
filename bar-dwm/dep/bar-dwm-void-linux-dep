@@ -1,0 +1,2 @@
+#bar-dwm void linux dep
+sudo xbps-install alsa-utils cmus setxkbmap wpa_supplicant NetworkManager xbacklight connman curl pamixer spotifyd playerctl xsetroot
