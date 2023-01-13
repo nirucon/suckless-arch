@@ -129,6 +129,6 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 # aliases
-if [ -e $HOME/.bash_aliases_void ]; then
+if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
