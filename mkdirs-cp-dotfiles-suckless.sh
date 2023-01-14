@@ -40,27 +40,27 @@ sleep 2
 echo "cp suckless dirs - done!" &
 
 # install suckless
-echo "install suckless..." &
-cd ~/.config/Suckless/dwm/ &
-sudo make clean install &
+#echo "install suckless..." &
+#cd ~/.config/Suckless/dwm/ &
+#sudo make clean install &
 
-sleep 3
+#sleep 3
 
-cd ~/.config/Suckless/dmenu/ &
-sudo make clean install &
+#cd ~/.config/Suckless/dmenu/ &
+#sudo make clean install &
 
-sleep 3
+#sleep 3
 
-cd ~/.config/Suckless/st/ &
-sudo make clean install &
+#cd ~/.config/Suckless/st/ &
+#sudo make clean install &
 
-sleep 3
+#sleep 3
 
-cd ~/.config/Suckless/slock/ &
-sudo make clean install &
+#cd ~/.config/Suckless/slock/ &
+#sudo make clean install &
 
-sleep 3
-echo "install suckless - done!" &
+#sleep 3
+#echo "install suckless - done!" &
 
 # chmod bar
 echo "chmod bar-dwm..." &
