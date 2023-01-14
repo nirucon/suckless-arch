@@ -11,4 +11,4 @@ ln -s /media/1TB-ONE/Nextcloud/Tech/Scripts ~/Scripts &
 
 sleep 1
 
-echo "links to mp3, Wallpaers, Screenshots, Nextcloud, Scripts = done!"
+echo "links to mp3, Wallpapers, Screenshots, Nextcloud, Scripts = done!"
