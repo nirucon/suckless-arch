@@ -13,12 +13,11 @@ alias calc="bc" # calculator
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
-# pacman
-alias update="sudo pacman -Syyu" # update system
-alias pac="sudo pacman -S" # install
 # power
-alias shutdown="sudo shutdown -P now"
-alias reboot="sudo shutdown -r now"
+alias shutdown='sudo shutdown -P now'
+alias reboot='sudo shutdown -r now'
+alias zzz='systemctl suspend'
+alias suspend'systemctl suspend'
 # misc
 alias ping='ping -c 5' # ping 5
 # get out of current directory
@@ -28,7 +27,10 @@ alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
-# date time
-alias now="date +"%T""
-alias nowtime=now
-alias nowdate="date +\"%d-%m-%Y\""
+# pgk
+alias update='sudo pacman -Syuu'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -R'
+alias pacup='sudo pacman -Syuu'
+alias paci='sudo pacman -S'
+alias pacr='sudo pacman -R'
