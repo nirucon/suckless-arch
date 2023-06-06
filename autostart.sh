@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# place in ~/.dwm/
+
 sleep 1
 
 xautolock -time 10 -locker slock &
