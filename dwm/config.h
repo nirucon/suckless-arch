@@ -12,8 +12,8 @@ static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Mononoki Nerd Font:size=10:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Mononoki Nerd Font:size=10:antialias=true:autohint=true";
+static const char *fonts[]          = { "Mononoki Nerd Font:size=9:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Mononoki Nerd Font:size=9:antialias=true:autohint=true";
 static const char col_black[]       = "#000000"; /* black */
 static const char col_gray[]        = "#333333"; /* gray */
 static const char col_green[]       = "#a3be8c"; /* green */
@@ -33,7 +33,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "main", "files", "@", "dev", "photo", "gimp", "movie", "tv", "game" };
+static const char *tags[] = { "main", "files", "@", "dev", "gimp", "music", "movie", "brave", "temp" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -41,11 +41,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       1<<5,            0,           -1 },
+	{ "Gimp",     NULL,       NULL,       1<<4,            0,           -1 },
 	{ "Thunderbird",     NULL,       NULL,       1<<2,            0,           -1 },
 	{ "Bluefish",     NULL,       NULL,       1<<3,            0,           -1 },
 	{ "Filezilla",     NULL,       NULL,       1<<3,            0,           -1 },
 	{ "Shotwell",     NULL,       NULL,       1<<4,            0,           -1 },
+	{ "Spectacle",     NULL,       NULL,       NULL,            1,           -1 },
 };
 
 /* layout(s) */
@@ -122,9 +123,12 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
         { 0,                            XK_Print,  spawn,          SHCMD("scrot ~/Nextcloud/Screenshots/scrot_%Y-%m-%d_%H-%M-%S.png") },
-        { MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("scrot -s ~/Nextcloud/Screenshots/scrot_%Y-%m-%d_%H-%M-%S.png") },
+        { MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("scrot -s ~/Nextcloud/Screenshots/scrot_%Y-%m-%d_%H-%M-%S.png -e 'xclip -selection clipboard -t image/png -i $f'") },
+	{ MODKEY,			XK_Print,  spawn,	   SHCMD("spectacle") },
         { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
+        { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("rofi -show run") },
         { MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox") },
+        { MODKEY,	                XK_z,      spawn,          SHCMD("zzz") },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
