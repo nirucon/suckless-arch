@@ -35,6 +35,7 @@ export SEP2=" ] "
 . "$DIR/bar-functions/dwm_spotify.sh"
 #. "$DIR/bar-functions/dwm_wpa.sh"
 #. "$DIR/bar-functions/dwm_network_speed.sh"
+. "$DIR/bar-functions/dwm_weather.sh"
 
 parallelize() {
     while true
@@ -66,6 +67,7 @@ do
     #upperbar="$upperbar$(dwm_connman)"
     #upperbar="$upperbar$(dwm_wpa)"
     #upperbar="$upperbar${__DWM_BAR_NETWORKMANAGER__}"
+    upperbar="$upperbar${__DWM_BAR_WEATHER__}"
     upperbar="$upperbar$(dwm_date)"
    
     # Append results of each func one by one to the lowerbar string
