@@ -122,8 +122,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-        { 0,                            XK_Print,  spawn,          SHCMD("scrot ~/Nextcloud/Screenshots/scrot_%Y-%m-%d_%H-%M-%S.png") },
-        { MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("scrot -s ~/Nextcloud/Screenshots/scrot_%Y-%m-%d_%H-%M-%S.png -e 'xclip -selection clipboard -t image/png -i $f'") },
+        { 0,                            XK_Print,  spawn,          SHCMD("maim -s ~/Nextcloud/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png") },
+        { MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 	{ MODKEY,			XK_Print,  spawn,	   SHCMD("spectacle") },
         { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
         { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("rofi -show run") },
