@@ -2,7 +2,7 @@
 # place in ~/.dwm/
 
 # dwm statusbar
-/home/niru/.config/Suckless/bar-dwm/bar_dwm.sh &
+/home/niru/.config/suckless/bar-dwm/bar_dwm.sh &
 
 # compositor
 picom -f &
