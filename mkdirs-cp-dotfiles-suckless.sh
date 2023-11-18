@@ -6,7 +6,7 @@
 echo "mkdirs..." &
 mkdir ~/.config &
 mkdir ~/.dwm &
-mkdir ~/.config/Suckless &
+mkdir ~/.config/suckless &
 mkdir ~/Music &
 mkdir ~/Pictures &
 mkdir ~/Tempfiles &
