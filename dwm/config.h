@@ -23,8 +23,8 @@ static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+    [SchemeNorm] = { "#9ACD32", "#202020", "#556B2F" }, // Dark green
+    [SchemeSel]  = { "#FFD700", "#556B2F", "#8B4513" }, // Gold and brown
 };
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
