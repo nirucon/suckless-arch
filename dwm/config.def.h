@@ -130,7 +130,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox") },
         { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("pcmanfm") },
         { MODKEY|ShiftMask,             XK_g,      spawn,          SHCMD("gimp") },
-        { MODKEY,                       XK_z,      spawn,          SHCMD("zzz") },
+        { MODKEY,                       XK_z,      spawn,          SHCMD("systemctl suspend") },
 
 };
 
